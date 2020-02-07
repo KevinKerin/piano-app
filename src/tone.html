@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
+<script src="https://unpkg.com/tone"></script>
+<script src="https://unpkg.com/@tonejs/ui"></script>
+
+<tone-demo autoplay>
+    <tone-keyboard octaves="4"></tone-keyboard>
+</tone-demo>
+<script>
+
+const synth = new Tone.AMSynth().toMaster()
+
+//attach a listener to the keyboard events
+document.querySelector('tone-keyboard').addEventListener('noteon', e => {
+  synth.triggerAttack(e.detail.name);
+  console.log(e.detail.name);
+})
+
+document.querySelector('tone-keyboard').addEventListener('noteoff', e => {
+  synth.triggerRelease();
+})
+
+
+</script>
+<tone-demo autoplay></tone-demo>
+
+</body>
+</html>

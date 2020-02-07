@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piano for Beginners</title>
+    <style>
+
+        #logo {
+            width: 170px;
+            height: 170px;
+        }
+
+        #songs {
+            float: right;
+            height: 900px;
+        }
+
+        #scales {
+            float: left;
+        }
+
+        .database {
+            text-align: center;
+            position: relative;
+            width: 10%;;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+        }
+
+        #main {
+            position: relative;
+            float: right;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+            width: 78%;
+            height: 500px;
+            padding: 10px;
+        }
+
+        #piano {
+            padding-top: 40px;
+            position: relative;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+<img src="logo.png" alt="" id="logo">
+<p>Logged in as Kevin Kerin</p>
+<a href="">My Account</a>
+<a href="">Logout</a>
+<a href=""></a>
+<div id="box">
+    <div class="database" id="scales">
+        <h4>Major Scales</h4>
+        <a href="">C major</a></br>
+        <a href="">C#/Db major</a></br>
+        <a href="">D major</a></br>
+        <a href="">D#/Eb major</a></br>
+        <a href="">E major</a></br>
+        <a href="">F major</a></br>
+        <a href="">F#/Gb major</a></br>
+        <a href="">G major</a></br>
+        <a href="">G#/Ab major</a></br>
+        <a href="">A major</a></br>
+        <a href="">A#/Bb major</a></br>
+        <a href="">B major</a>
+
+        <h4>Minor Scales</h4>
+        <a href="">C minor</a></br>
+        <a href="">C#/Db minor</a></br>
+        <a href="">D minor</a></br>
+        <a href="">D#/Eb minor</a></br>
+        <a href="">E minor</a></br>
+        <a href="">F minor</a></br>
+        <a href="">F#/Gb minor</a></br>
+        <a href="">G minor</a></br>
+        <a href="">G#/Ab minor</a></br>
+        <a href="">A minor</a></br>
+        <a href="">A#/Bb minor</a></br>
+        <a href="">B minor</a>
+
+        <h4>Basic Chords</h4>
+        <a href="">C minor</a></br>
+        <a href="">C#/Db minor</a></br>
+        <a href="">D minor</a></br>
+        <a href="">D#/Eb minor</a></br>
+        <a href="">E minor</a></br>
+        <a href="">F minor</a></br>
+        <a href="">F#/Gb minor</a></br>
+        <a href="">G minor</a></br>
+        <a href="">G#/Ab minor</a></br>
+        <a href="">A minor</a></br>
+        <a href="">A#/Bb minor</a></br>
+        <a href="">B minor</a>
+        <button id="show-log">Show log</button>
+        <button id="record">Start Recording</button>
+        <button id="stop-record" onclick="stopRecording = true">Stop Recording</button>
+        <button id="octave-down">Octave down</button>
+        <button id="octave-up">Octave up</button>
+        <button id="transpose-down">Transpose down</button>
+        <button id="transpose-up">Transpose up</button>
+        <button id="playback">Play on piano</button>
+
+        <h4>Intermediate Chords</h4>
+        <a href="">etc.</a>
+    </div>
+    <div id="main">
+        <p>Connected to Yamaha DGX-630 GrandPortable</p>
+        <div id="buttons">
+
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+            <button id="save">Save to Database</button>
+            <button id="upload">Upload</button>
+            <button id="download">Download</button>
+            </br>
+        </div>
+
+        <img id="piano" src="https://lh3.googleusercontent.com/proxy/KPptnIHQ3Xxrvi5LSggMEtt9JEdsRF6W923_x48I1I0kD_wrYe8tfir1yIpjT0Eff1F-SlXkLy8X7_vEMAckO_Hr" alt="">
+
+    </div>
+
+    <div class="database" id="songs">
+        <h4>Saved Songs</h4>
+        <a href="with-or-without-you.html">With Or Without You - U2</a></br>
+        <a href="">Bohemian Rhapsody</a></br>
+        <a href="">Bohemian Rhapsody 2nd attempt</a></br>
+        <a href="">Ad lib stuff</a></br>
+        <a href="">Messing around</a></br>
+        <a href="">Wedding Playlist</a></br>
+        <div id="test"></div>
+    </div>
+
+    <tone-demo autoplay>
+    </tone-demo>
+
+
+</div>
+
+<script src="WebMIDIAPI/WebMIDIAPI.js"></script>
+<script src="WebMIDIAPI/WebMIDIAPIWrapper.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
+<script src="https://unpkg.com/tone"></script>
+<script src="https://unpkg.com/@tonejs/ui"></script>
+<!--<script src="webmidi.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/webmidi"></script>
+<script src="script.js"></script>
+<script src="Tone.js"></script>
+
+</body>
+</html>
